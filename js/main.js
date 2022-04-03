@@ -1,5 +1,6 @@
 /*----- constants -----*/
 const cards = document.querySelectorAll('.concentrate-card');
+const plays = document.querySelector('.play-reset');
 
 
 /*----- app's state (variables) -----*/
@@ -13,16 +14,18 @@ const cards = document.querySelectorAll('.concentrate-card');
 
 
 /*----- event listeners -----*/
-
+cards.forEach(card => card.addEventListener('click', turnCard));
 
 
 
 
 /*----- functions -----*/
 
-init ();
+function turnCard(){
+    this.classList.toggle('turn');
+    console.log('turned');
+    console.log(this);
 
-function init() {
+};
 
-    
-}
+

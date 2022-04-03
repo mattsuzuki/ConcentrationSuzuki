@@ -103,7 +103,7 @@ header {
 }
 
 .catch-phrase {
-  max-width: 500px;
+  max-width: 400px;
   padding: 3% 4% 1% 3%;
   font-size: 24px;
   letter-spacing: 2px;
@@ -125,6 +125,7 @@ header {
   flex-wrap: wrap;
   border: 2px solid black;
   margin: auto;
+  perspective: 1000px;
 }
 
 .concentrate-card {
@@ -133,7 +134,21 @@ header {
   padding: 10px;
   position: relative;
   padding: 10px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: 1s;
 }
+
+.concentrate-card:active {
+  transform: scale(.92);
+  transition: transform .1s;
+}
+
+.concentrate-card.turn {
+  rotate: X(280deg);
+
+}
+
 img {
   width: 100px;
 }
