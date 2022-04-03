@@ -1,5 +1,5 @@
 /*----- constants -----*/
-
+const cards = document.querySelectorAll('.concentrate-card');
 
 
 /*----- app's state (variables) -----*/
