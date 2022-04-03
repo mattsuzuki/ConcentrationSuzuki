@@ -5,7 +5,8 @@ const plays = document.querySelector('.play-reset');
 
 /*----- app's state (variables) -----*/
 
-
+let pTurnedCard = false;
+let firstCard, secondTurn;
 
 
 /*----- cached element references -----*/
@@ -27,5 +28,6 @@ function turnCard(){
     console.log(this);
 
 };
+
 
 
