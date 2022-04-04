@@ -1,4 +1,7 @@
 /*----- constants -----*/
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max) + 1;
+  }
 
 let playcards = [
   1,
@@ -44,27 +47,29 @@ starts.forEach((start) => start.addEventListener("click", startGame));
 /*----- functions -----*/
 
 function startGame() {
-shuffle(playcards)
-};
+  shuffle(playcards);
+}
 console.log(shuffle(cards));
 
 function shuffle(array) {
-    let currentIndex = array.length,  randomIndex;
-  
-    // While there remain elements to shuffle...
-    while (currentIndex != 0) {
-  
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-  
-      // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
-    }
-  
-    return array;
+  let currentIndex = array.length,
+    randomIndex;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
   }
+
+  return array;
+}
 
 function turnCard() {
   this.classList.toggle("turn");
@@ -73,18 +78,17 @@ function turnCard() {
 }
 
 function render() {
-    gameboard
+  gameboard;
 }
-let shuffledArray = shuffle(playcards);
-let card1 = shuffledArray[1]
+// let shuffledArray = shuffle(playcards);
+// let card1 = shuffledArray[1];
 
 
-let card = getRandomInt(9);
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max )+ 1;
-  }
-  
-  let renderCard = document.getElementById('card1') 
-let url = `./imgs/fronts/clubs_${card}.svg`
 
-renderCard.setAttribute("src", url);
+let cardEls = document.querySelectorAll(".front-face");
+
+cardEls.forEach((card ) => {
+    let randomNum = getRandomInt(9);
+    let url = `./imgs/fronts/clubs_${randomNum}.svg`;
+    card.setAttribute("src", url);
+});
