@@ -32,23 +32,32 @@ let playcards = [
 
 /*----- app's state (variables) -----*/
 
-// let pTurnedCard = false;
-// let firstCard, secondTurn;
+
 
 /*----- cached element references -----*/
 const cards = document.querySelectorAll(".concentrate-card");
-const starts = document.querySelectorAll(".play-reset");
+const starts = document.querySelector(".play-reset");
 const gameboard = document.querySelector(".concentrate-game-board");
+const hides = document.querySelector('.concentrate-card');
 
 /*----- event listeners -----*/
 cards.forEach((card) => card.addEventListener("click", turnCard));
 starts.forEach((start) => start.addEventListener("click", startGame));
+hides.forEach((hide) => hide.addEventListener("click", hideGame));
 
 
 /*----- functions -----*/
+function hideGame(){
+ let x = document.querySelectorAll(".concentrate-card");
+  if (x.style.display === "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "none";
+  }
+}
 
 function startGame() {
-  shuffle(playcards);
+  shuffle(playcards);  
 }
 console.log(shuffle(cards));
 
@@ -72,6 +81,21 @@ function shuffle(array) {
   return array;
 }
 
+let playTurnedCard = false;
+let firstCard, secondTurn;
+
+function selectCard() {
+  this.classList.add('select');
+
+  if (!playTurnedCard) {
+    playTurnedCard = true;
+    firstCard = this;
+    console.log({playTurnedCard, firstCard});
+  }
+cards.forEach(card => card.addEventListener('click', selectCard));
+
+}
+
 function turnCard() {
   this.classList.toggle("turn");
   console.log("turned");
@@ -81,19 +105,18 @@ function turnCard() {
 function render() {
   gameboard;
 }
-// let shuffledArray = shuffle(playcards);
-// let card1 = shuffledArray[1];
-
 
 
 let cardEls = document.querySelectorAll(".front-face");
 
 cardEls.forEach((card ) => {
-    let randomNum = getRandomInt(10);
+    let randomNum = getRandomInt(9);
     let url = `./imgs/fronts/clubs_${randomNum}.svg`;
     card.setAttribute("src", url);
 });
 
 
-// REDO LOGIC!!!!
+
+
+
 
