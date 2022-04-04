@@ -44,6 +44,7 @@ const gameboard = document.querySelector(".concentrate-game-board");
 cards.forEach((card) => card.addEventListener("click", turnCard));
 starts.forEach((start) => start.addEventListener("click", startGame));
 
+
 /*----- functions -----*/
 
 function startGame() {
@@ -88,7 +89,11 @@ function render() {
 let cardEls = document.querySelectorAll(".front-face");
 
 cardEls.forEach((card ) => {
-    let randomNum = getRandomInt(9);
+    let randomNum = getRandomInt(10);
     let url = `./imgs/fronts/clubs_${randomNum}.svg`;
     card.setAttribute("src", url);
 });
+
+
+// REDO LOGIC!!!!
+
