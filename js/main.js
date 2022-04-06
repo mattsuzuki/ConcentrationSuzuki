@@ -20,11 +20,12 @@ const CARD_BACK = "imgs/backs/backcard.png";
 let cards; // Array of  shuffled card objects
 let firstCard; // First card clicked (card object) or null
 let numBad;
+let score;
 let ignoreClicks;
 
 /*----- cached element references -----*/
 const msgEl = document.querySelector("h3");
-const correctEl= document.querySelector("h2");
+
 
 /*----- event listeners -----*/
 document.querySelector("main").addEventListener("click", handleChoice);
@@ -40,6 +41,7 @@ function init() {
   cards = getShuffledCards();
   firstCard = null;
   numBad = 0;
+  score = 0;
   ignoreClicks = false;
   render();
 }
@@ -74,24 +76,31 @@ function handleChoice(evt) {
   const cardIdx = parseInt(evt.target.id);
   if (isNaN(cardIdx) || ignoreClicks) return;
   const card = cards[cardIdx];
-  if (firstCard) {
+  if(firstCard && firstCard === card){
+    firstCard = null;
+  }
+  else if (firstCard) {
     if (firstCard.img === card.img) {
       // correct match
       firstCard.matched = card.matched = true;
-    } else {
+      firstCard = null; 
+      score++;
+    } else { 
+      ignoreClicks = true; 
+      card.matched = true;
+      score++;
       numBad++;
+      setTimeout(function () {
+        ignoreClicks = false;
+        firstCard = null;
+        card.matched = false;
+        render();
+      }, 1000);
     }
-    firstCard = null;
+  
   } else {
     firstCard = card;
   }
+
   render();
 }
-
-
-// 1. If Player matches all pairs (cards with the same front ) player wins
-// - use ternary Statment; 
-// - rendor to the page that Player has won using .innerHTML
-
-// 2. Create functionality to the red "Play" button 
-// - use 
