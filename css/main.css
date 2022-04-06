@@ -129,14 +129,15 @@ header {
 
 main {
   display: grid;
-  grid-template-columns: repeat(4, 15vmin);
-  grid-template-rows: repeat(4, 15vmin);
+  grid-template-columns: repeat(5, 15vmin);
+  grid-template-rows: repeat(5, 15vmin);
   gap: 2vmin;
  justify-content: center;
 }
 
 img {
   border: 2px solid black;
+  width: 100px;
 }
 
 
@@ -159,9 +160,7 @@ img {
 
 }
 
-img {
-  width: 100px;
-}
+
 
 .front-face,
 .back-face {
