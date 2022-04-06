@@ -100,8 +100,8 @@ header {
   border: 2px solid white;
   background-color: red;
   color: white;
-  
 }
+
 
 .catch-phrase {
   max-width: 400px;
@@ -134,7 +134,7 @@ main {
   grid-template-rows: repeat(4, 15vmin);
   grid-gap: 1.5vmin;
  justify-content: center;
-padding-bottom: 4%;
+padding-bottom: 5%;
 }
 
 img {
@@ -142,7 +142,7 @@ img {
   width: 100px;
 }
 
-.scores h3 {
+.scores h3, h2 {
 display: flex;
 justify-content: center;
   color: white;
