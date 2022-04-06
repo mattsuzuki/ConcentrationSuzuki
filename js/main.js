@@ -22,6 +22,7 @@ let firstCard; // First card clicked (card object) or null
 let numBad;
 let score;
 let ignoreClicks;
+let winner;
 
 /*----- cached element references -----*/
 const msgEl = document.querySelector("h3");
@@ -85,6 +86,9 @@ function handleChoice(evt) {
       firstCard.matched = card.matched = true;
       firstCard = null; 
       score++;
+      winner = cards.every(function(card){
+        return card.matched 
+      })
     } else { 
       ignoreClicks = true; 
       card.matched = true;
