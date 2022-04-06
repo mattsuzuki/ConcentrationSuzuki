@@ -6,7 +6,7 @@
 }
 body {
   height: 100vh;
-  background: rgb(105, 100, 100);
+  background: rgb(0, 0, 0);
 }
 
 header {
@@ -97,6 +97,7 @@ header {
   height: 80px;
   margin-top: 5%;
   border-radius: 30px;
+  border: 2px solid white;
   background-color: red;
   color: white;
   
@@ -112,11 +113,11 @@ header {
   margin-bottom: 80px;
   margin-top: 70px;
 }
-.game-contain {
+/* .game-contain {
   display: flex;
   justify-content: center;
   margin-top: -90px
-}
+} */
 
 .concentrate-game-board {
   height: 1000px;
@@ -129,19 +130,30 @@ header {
 
 main {
   display: grid;
-  grid-template-columns: repeat(5, 15vmin);
-  grid-template-rows: repeat(5, 15vmin);
-  gap: 2vmin;
+  grid-template-columns: repeat(6, 15vmin);
+  grid-template-rows: repeat(4, 15vmin);
+  grid-gap: 1.5vmin;
  justify-content: center;
+padding-bottom: 4%;
 }
 
 img {
-  border: 2px solid black;
+  border: 3px solid rgb(255, 255, 255);
   width: 100px;
 }
 
+.scores h3 {
+display: flex;
+justify-content: center;
+  color: white;
+  font-family: "Monoton", cursive;
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
 
-.concentrate-card {
+
+
+/* .concentrate-card {
   width: calc(25% - 10px);
   height: calc(33.333% - 10px);
   position: relative;
@@ -178,4 +190,4 @@ img {
 
 .front-face{
   transform: rotateY(180deg);
-}
+} */

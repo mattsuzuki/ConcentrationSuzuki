@@ -1,33 +1,36 @@
 /*----- constants -----*/
-// Each of the "card" objects will be used twice,
-// then shuffled and used for the board's cards
+
 var SOURCE_CARDS = [
-  { img: "https://i.imgur.com/ZXPKaiN.jpg", matched: false },
-  { img: "https://i.imgur.com/XMEsZBX.jpg", matched: false },
-  { img: "https://i.imgur.com/6jX1bMT.jpg", matched: false },
-  { img: "https://i.imgur.com/yKdqsBv.jpg", matched: false },
-  { img: "https://i.imgur.com/1BV3HLr.jpg", matched: false },
-  { img: "https://i.imgur.com/QYmN6Hp.jpg", matched: false },
-  { img: "https://i.imgur.com/D5pWE05.jpg", matched: false },
-  { img: "https://i.imgur.com/Ss4Xo3x.jpg", matched: false },
-  { img: "https://i.imgur.com/1BV3HLr.jpg", matched: false },
-  { img: "https://i.imgur.com/QYmN6Hp.jpg", matched: false },
-  { img: "https://i.imgur.com/D5pWE05.jpg", matched: false },
-  { img: "https://i.imgur.com/Ss4Xo3x.jpg", matched: false },
+  { img: "imgs/fronts/clubs_2.svg", matched: false },
+  { img: "imgs/fronts/clubs_3.svg", matched: false },
+  { img: "imgs/fronts/clubs_4.svg", matched: false },
+  { img: "imgs/fronts/clubs_5.svg", matched: false },
+  { img: "imgs/fronts/clubs_6.svg", matched: false },
+  { img: "imgs/fronts/clubs_7.svg", matched: false },
+  { img: "imgs/fronts/clubs_8.svg", matched: false },
+  { img: "imgs/fronts/clubs_9.svg", matched: false },
+  { img: "imgs/fronts/clubs_10.svg", matched: false },
+  { img: "imgs/fronts/clubs_jack.svg", matched: false },
+  { img: "imgs/fronts/clubs_queen.svg", matched: false },
+  { img: "imgs/fronts/clubs_king.svg", matched: false },
 ];
 const CARD_BACK = "imgs/backs/backcard.png";
 
 /*----- app's state (variables) -----*/
-let cards; // Array of 16 shuffled card objects
+let cards; // Array of  shuffled card objects
 let firstCard; // First card clicked (card object) or null
 let numBad;
 let ignoreClicks;
 
 /*----- cached element references -----*/
 const msgEl = document.querySelector("h3");
+const correctEl= document.querySelector("h2");
 
 /*----- event listeners -----*/
 document.querySelector("main").addEventListener("click", handleChoice);
+
+
+
 
 /*----- functions -----*/
 init();
@@ -41,6 +44,7 @@ function init() {
   render();
 }
 
+
 function render() {
   cards.forEach(function (card, idx) {
     const imgEl = document.getElementById(idx);
@@ -49,6 +53,7 @@ function render() {
   });
   msgEl.innerHTML = `Bad Count: ${numBad}`;
 }
+
 
 function getShuffledCards() {
   let tempCards = [];
@@ -82,3 +87,11 @@ function handleChoice(evt) {
   }
   render();
 }
+
+
+// 1. If Player matches all pairs (cards with the same front ) player wins
+// - use ternary Statment; 
+// - rendor to the page that Player has won using .innerHTML
+
+// 2. Create functionality to the red "Play" button 
+// - use 
