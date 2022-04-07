@@ -25,13 +25,17 @@ let score;
 let ignoreClicks;
 let winner;
 
+
 /*----- cached element references -----*/
 const msgEl = document.querySelector("h3");
 const winEl = document.querySelector("h2");
 
 
+
 /*----- event listeners -----*/
 document.querySelector("main").addEventListener("click", handleChoice);
+document.querySelector(".play-reset").addEventListener("click", render);
+
 
 
 /*----- functions -----*/
@@ -45,6 +49,7 @@ function init() {
   score = 0;
   ignoreClicks = false;
   render();
+  
 }
 
 function render() {
@@ -55,7 +60,7 @@ function render() {
   });
   msgEl.innerHTML = `Bad Count: ${numBad}`;
   if(winner === true){
-    alert("Testing")
+   msgEl.innerHTML = `Winner!`;
     }
 }
 
@@ -105,8 +110,7 @@ function handleChoice(evt) {
     firstCard = card;
   }
 
+
   render();
 }
-
-
 

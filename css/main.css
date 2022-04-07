@@ -89,9 +89,10 @@ header {
   align-items: baseline;
   justify-content: space-between;
   padding-right: 3%;
+  margin-top: -60px;
 }
 
-#play-reset {
+.play-reset {
   width: 150px;
   height: 80px;
   margin-top: 5%;
