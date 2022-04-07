@@ -16,27 +16,21 @@ var SOURCE_CARDS = [
 ];
 const CARD_BACK = "imgs/backs/backcard.png";
 
-
 /*----- app's state (variables) -----*/
 let cards; // Array of  shuffled card objects
 let firstCard; // First card clicked (card object) or null
-let numBad; // Running Count 
+let numBad; // Running Count
 let score;
 let ignoreClicks;
 let winner;
-
 
 /*----- cached element references -----*/
 const msgEl = document.querySelector("h3");
 const winEl = document.querySelector("h2");
 
-
-
 /*----- event listeners -----*/
 document.querySelector("main").addEventListener("click", handleChoice);
 document.querySelector(".play-reset").addEventListener("click", init);
-
-
 
 /*----- functions -----*/
 init();
@@ -49,7 +43,6 @@ function init() {
   score = 0;
   ignoreClicks = false;
   render();
-  
 }
 
 function render() {
@@ -59,9 +52,9 @@ function render() {
     imgEl.src = src;
   });
   msgEl.innerHTML = `Bad Count: ${numBad}`;
-  if(winner === true){
-   msgEl.innerHTML = `Winner!`;
-    }
+  if (winner === true) {
+    msgEl.innerHTML = `Winner!`;
+  }
 }
 
 function getShuffledCards() {
@@ -110,7 +103,5 @@ function handleChoice(evt) {
     firstCard = card;
   }
 
-
   render();
 }
-
