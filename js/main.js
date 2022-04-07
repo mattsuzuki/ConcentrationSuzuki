@@ -34,7 +34,7 @@ const winEl = document.querySelector("h2");
 
 /*----- event listeners -----*/
 document.querySelector("main").addEventListener("click", handleChoice);
-document.querySelector(".play-reset").addEventListener("click", render);
+document.querySelector(".play-reset").addEventListener("click", init);
 
 
 
