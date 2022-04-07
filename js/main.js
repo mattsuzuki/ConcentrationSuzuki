@@ -20,7 +20,7 @@ const CARD_BACK = "imgs/backs/backcard.png";
 /*----- app's state (variables) -----*/
 let cards; // Array of  shuffled card objects
 let firstCard; // First card clicked (card object) or null
-let numBad;
+let numBad; // Running Count 
 let score;
 let ignoreClicks;
 let winner;

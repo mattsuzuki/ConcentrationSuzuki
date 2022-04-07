@@ -19,7 +19,6 @@ header {
   animation-name: colorful;
   animation-duration: 1s;
   animation-iteration-count: infinite;
-  border-bottom: 2px solid red;
 }
 @keyframes colorful {
   0% {
@@ -104,10 +103,10 @@ header {
 
 
 .catch-phrase {
-  max-width: 400px;
+  max-width: 600px;
   padding: 3% 4% 1% 3%;
   font-size: 24px;
-  letter-spacing: 2px;
+  letter-spacing: 2px; 
   line-height: 30px;
   color: azure;
   margin-bottom: 80px;
@@ -138,7 +137,7 @@ padding-bottom: 5%;
 }
 
 img {
-  border: 3px solid rgb(255, 255, 255);
+  border: 3px solid rgb(246, 246, 246);
   width: 100px;
 }
 
