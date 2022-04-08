@@ -10,12 +10,21 @@
 <div> 
 <h1>Technologies Used</h1>
 :computer: 
-![JavaScript](https://img.shields.io/badge/-JavaScript-333?style=flat&logo=javascript) 
-![HTML5](https://img.shields.io/badge/-HTML5-333?style=flat&logo=html5)
-![CSS3](https://img.shields.io/badge/-CSS-333?style=flat&logo=css3)
+<p>- HTML5
+<p>- CSS 
+<p>- JavaScript
+<p>- VSCode
+<p>- Git
+<p>- Github
+
 </div>
 <div>
 <h1>Game Layout</h1>
 <img src= "imgs/gameboard.png">
 </div>
-<details>
+<div>
+<h1> Future Features </h1>
+<p> - Implementing a timer to end the game if the player exceeds a certain amount of time to win the game. 
+
+<p> - Placing an input for players to track their scores relative to other players who have played.
+</div>
