@@ -27,4 +27,8 @@
 <p> - Implementing a timer to end the game if the player exceeds a certain amount of time to win the game. 
 
 <p> - Placing an input for players to track their scores relative to other players who have played.
+
+<p> - Adding background music 
+
+<p> - Creating a background animation to make it have a "breathing effect"
 </div>

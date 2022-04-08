@@ -26,7 +26,7 @@ let winner;
 
 /*----- cached element references -----*/
 const msgEl = document.querySelector("h3");
-// const winEl = document.querySelector("h2");
+
 
 /*----- event listeners -----*/
 document.querySelector("main").addEventListener("click", handleChoice);
@@ -38,7 +38,6 @@ init();
 // Initialize all state, then call render()
 function init() {
   cards = getShuffledCards();
-  console.log('hello');
   firstCard = null;
   numBad = 0;
   score = 0;
