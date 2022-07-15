@@ -4,18 +4,19 @@
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(56, 110, 56);
+  background-color: darkgreen;
   font-family: "Monoton", cursive;
 }
 
 header {
   display: flex;
   justify-content: center;
-  padding: 40px 5%;
+  padding: 30px 5%;
   font-size: 30px;
   color: white;
   margin: 0 auto;
-  background-color: darkgreen;
+  background-color: black;
+  border-bottom: 2px solid white;
 }
 
 /* GAME PLAY SECTION */
@@ -53,7 +54,6 @@ header {
 main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: repeat(4, 1fr); */
   grid-gap: 15px;
   justify-content: center;
   margin-left: 3%;
@@ -107,6 +107,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     margin-top: 70px;
+    margin-bottom: 70px;
   }
   .catch-phrase {
     padding: 0;
