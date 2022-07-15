@@ -17,9 +17,9 @@ var SOURCE_CARDS = [
 const CARD_BACK = "imgs/backs/backcard.png";
 
 /*----- app's state (variables) -----*/
-let cards; // Array of  shuffled card objects
-let firstCard; // First card clicked (card object) or null
-let numBad; // Running Count
+let cards; 
+let firstCard; 
+let numBad; 
 let score;
 let ignoreClicks;
 let winner;
@@ -35,7 +35,7 @@ document.getElementById("play-reset").addEventListener("click", init);
 /*----- functions -----*/
 init();
 
-// Initialize all state, then call render()
+
 function init() {
   cards = getShuffledCards();
   firstCard = null;
@@ -71,7 +71,7 @@ function getShuffledCards() {
   return cards;
 }
 
-// Update all impacted state, then call render()
+
 function handleChoice(evt) {
   const cardIdx = parseInt(evt.target.id);
   if (isNaN(cardIdx) || ignoreClicks) return;
@@ -80,7 +80,6 @@ function handleChoice(evt) {
     firstCard = null;
   } else if (firstCard) {
     if (firstCard.img === card.img) {
-      // correct match
       firstCard.matched = card.matched = true;
       firstCard = null;
       score++;
