@@ -2,7 +2,7 @@
 <div align ="center">
    <h1>ConcentrationSuzuki </h1>
    <h3></h3>
-   <h5> Matthew Suzuki </h5><a>https://mattsuzuki.github.io/ConcentrationSuzuki/</a>                             
+   <h5> Matthew Suzuki </h5>https://mattsuzuki.github.io/ConcentrationSuzuki/                          
 </div>
 
 <h1> Instructions</h1>
